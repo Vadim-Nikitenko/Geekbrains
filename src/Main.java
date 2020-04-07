@@ -1,6 +1,4 @@
 public class Main {
-    //1. Создать пустой проект в IntelliJ IDEA и прописать метод main();
-
     //2. Создать переменные всех пройденных типов данных, и инициализировать их значения;
     private byte b = 1;
     private int i = 10;
@@ -12,6 +10,7 @@ public class Main {
     private boolean bool = true;
     private String str = "Hello world";
 
+    //1. Создать пустой проект в IntelliJ IDEA и прописать метод main();
     public static void main(String[] args) {
         System.out.println(calculate(1, 2, 3, 4));
         System.out.println(compare(15, 1));
