@@ -1,4 +1,4 @@
-public class Main {
+public class Lesson1 {
     //2. Создать переменные всех пройденных типов данных, и инициализировать их значения;
     private byte b = 1;
     private int i = 10;
