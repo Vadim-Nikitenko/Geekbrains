@@ -29,7 +29,7 @@ public class Lesson3_2 {
     }
 
     public static String computerImagineWord() {
-        return words[random.nextInt(words.length - 1)];
+        return words[random.nextInt(words.length)];
     }
 
     public static void gameCycle() {
