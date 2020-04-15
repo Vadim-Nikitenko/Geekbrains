@@ -38,7 +38,7 @@ public class Lesson3_1 {
     }
 
     public static boolean checkBounds(int userNumber) {
-        return userNumber < MAX_BOUND && userNumber > MIN_BOUND;
+        return userNumber < MAX_BOUND + 1 && userNumber > MIN_BOUND + 1;
     }
 
     public static void gameCycle(int randomNumber) {
