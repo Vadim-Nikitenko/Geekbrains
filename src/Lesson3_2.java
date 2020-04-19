@@ -49,7 +49,7 @@ public class Lesson3_2 {
 
     private static boolean checkWin(String randomWord, String userWord) {
         return randomWord.equals(userWord);
-    }
+    } 
 
     public static void compareWords() {
         int min = 0;
