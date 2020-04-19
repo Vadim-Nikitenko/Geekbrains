@@ -114,6 +114,7 @@ public class Lesson4 {
         }
     }
 
+    // ****************** ДОМАШНЕЕ ЗАДАНИЕ ****************
     private static boolean checkWin(char c, int dotToWin) {
         for (int i = 0; i < SIZE; i++) {            // ползём по всему полю
             for (int j = 0; j < SIZE; j++) {
