@@ -1,3 +1,5 @@
+package Lesson3;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -26,7 +28,7 @@ public class Lesson3_2 {
         System.out.println("Список слов:" + Arrays.toString(words));
         randomWord = computerImagineWord();
         gameCycle();
-    } 
+    }
 
     public static String computerImagineWord() {
         return words[random.nextInt(words.length)];
