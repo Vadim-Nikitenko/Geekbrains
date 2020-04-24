@@ -5,12 +5,12 @@ public class Cat extends Animal {
 
     public Cat() {
         super(200, 2, 0);
+        countCat = ++countCat;
     }
 
     @Override
     public void swim(float length) {
         System.out.println("Коты не умеют плавать");
-        countCat = ++countCat;
     }
 
     public static int getCountCat() {
