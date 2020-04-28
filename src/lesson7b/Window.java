@@ -14,7 +14,7 @@ public class Window extends JFrame {
             {"6", "5", "4", "/"},
             {"3", "2", "1", "*"},
             {"0", "+", "-", "="}
-    };
+    }; 
 
     public Window() {
         setBounds(600, 200, 350, 350);
