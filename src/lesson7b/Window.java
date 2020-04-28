@@ -1,4 +1,4 @@
-package lesson7_2;
+package lesson7b;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
