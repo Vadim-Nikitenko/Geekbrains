@@ -49,11 +49,6 @@ public class Logic {
             WinnerWindow.setText("Нолики победили");
             return;
         }
-        if (isFull()) {
-            WinnerWindow.setText("Ничья");
-            level = DIFFICULT;
-            return;
-        }
         gameFinished = false;
     }
 
@@ -158,7 +153,7 @@ public class Logic {
                     map[i][j] = DOT_X;
                     if (checkWin(DOT_X, DOTS_TO_WIN - level)) {
                         map[i][j] = DOT_O;
-                        if(level > 0){
+                        if (level > 0) {
                             level--;
                         }
                         return true;
@@ -173,5 +168,4 @@ public class Logic {
     public static void setGameMode(int gameMode) {
         Logic.gameMode = gameMode;
     }
-
 }
