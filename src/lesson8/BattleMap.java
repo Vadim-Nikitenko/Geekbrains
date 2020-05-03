@@ -10,19 +10,14 @@ public class BattleMap extends JPanel {
     public static final int MODE_H_V_A = 0;
     public static final int MODE_H_V_H = 1;
     private static int turn = 0;
-
     private int fieldSizeX;
     private int fieldSizeY;
     private int winLength;
     private Graphics2D g2;
-
     private static int cellHeight;
     private static int cellWidth;
     private int gameMode;
-
-
     private boolean isInit = false;
-
 
     public BattleMap(GameWindow gameWindow) {
         this.gameWindow = gameWindow;
@@ -40,7 +35,6 @@ public class BattleMap extends JPanel {
                 }
             }
         });
-
     }
 
     private void update1(MouseEvent e) {
@@ -117,11 +111,9 @@ public class BattleMap extends JPanel {
                 }
             }
         }
-
-        if(Logic.gameFinished){
+        if (Logic.gameFinished) {
             drawWinLine(Logic.x1, Logic.y1, Logic.x2, Logic.y2);
         }
-
     }
 
     private void drawO(int cellX, int cellY) {
@@ -135,12 +127,11 @@ public class BattleMap extends JPanel {
                 (cellX + 1) * cellWidth - 10, (cellY + 1) * cellHeight - 10);
         g2.drawLine((cellX + 1) * cellWidth - 10, cellY * cellHeight + 10,
                 cellX * cellWidth + 15, (cellY + 1) * cellHeight - 15);
-
     }
 
     private void drawWinLine(int x1, int y1, int x2, int y2) {
         g2.setColor(Color.YELLOW);
-        g2.drawLine(x1*cellWidth + (cellWidth/2), y1*cellHeight+ (cellWidth/2), x2*cellWidth + (cellWidth/2), y2*cellHeight + (cellHeight/2));
+        g2.drawLine(x1 * cellWidth + (cellWidth / 2), y1 * cellHeight + (cellWidth / 2), x2 * cellWidth + (cellWidth / 2), y2 * cellHeight + (cellHeight / 2));
     }
 
     void startNewGame(int gameMode, int fieldSizeX, int fieldSizeY, int winLength) {
