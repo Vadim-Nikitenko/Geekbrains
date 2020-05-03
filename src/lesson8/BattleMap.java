@@ -139,6 +139,7 @@ public class BattleMap extends JPanel {
     }
 
     private void drawWinLine(int x1, int y1, int x2, int y2) {
+        g2.setColor(Color.YELLOW);
         g2.drawLine(x1*cellWidth + (cellWidth/2), y1*cellHeight+ (cellWidth/2), x2*cellWidth + (cellWidth/2), y2*cellHeight + (cellHeight/2));
     }
 
