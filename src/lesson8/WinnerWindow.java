@@ -33,6 +33,7 @@ public class WinnerWindow extends JFrame {
             setVisible(false);
         });
         add(bottomPanel, BorderLayout.SOUTH);
+
         setVisible(false);
     }
 

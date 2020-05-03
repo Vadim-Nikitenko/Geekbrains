@@ -61,11 +61,10 @@ public class BattleMap extends JPanel {
             checkWin();
         }
         repaint();
-    }
+    } 
 
     void checkWin() {
         if (Logic.gameFinished) {
-            setBackground(Color.GREEN);
             new WinnerWindow().setVisible(true);
             turn = 0;
         }
