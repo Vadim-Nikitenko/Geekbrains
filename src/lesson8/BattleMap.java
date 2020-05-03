@@ -110,28 +110,36 @@ public class BattleMap extends JPanel {
         for (int i = 0; i < Logic.SIZE_Y; i++) {
             for (int j = 0; j < Logic.SIZE_X; j++) {
                 if (Logic.map[i][j] == Logic.DOT_O) {
-                    drawO(g, j, i);
+                    drawO(j, i);
                 }
                 if (Logic.map[i][j] == Logic.DOT_X) {
-                    drawX(g, j, i);
+                    drawX(j, i);
                 }
             }
         }
 
+        if(Logic.gameFinished){
+            drawWinLine(Logic.x1, Logic.y1, Logic.x2, Logic.y2);
+        }
+
     }
 
-    private void drawO(Graphics g, int cellX, int cellY) {
+    private void drawO(int cellX, int cellY) {
         g2.setColor(new Color(0, 0, 255));
         g2.fillOval(cellX * cellWidth + 10, cellY * cellHeight + 10, cellWidth - 20, cellHeight - 20);
     }
 
-    private void drawX(Graphics g, int cellX, int cellY) {
+    private void drawX(int cellX, int cellY) {
         g2.setColor(new Color(255, 3, 0));
         g2.drawLine(cellX * cellWidth + 10, cellY * cellHeight + 10,
                 (cellX + 1) * cellWidth - 10, (cellY + 1) * cellHeight - 10);
         g2.drawLine((cellX + 1) * cellWidth - 10, cellY * cellHeight + 10,
                 cellX * cellWidth + 15, (cellY + 1) * cellHeight - 15);
 
+    }
+
+    private void drawWinLine(int x1, int y1, int x2, int y2) {
+        g2.drawLine(x1*cellWidth + (cellWidth/2), y1*cellHeight+ (cellWidth/2), x2*cellWidth + (cellWidth/2), y2*cellHeight + (cellHeight/2));
     }
 
     void startNewGame(int gameMode, int fieldSizeX, int fieldSizeY, int winLength) {

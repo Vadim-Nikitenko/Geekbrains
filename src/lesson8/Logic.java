@@ -14,6 +14,7 @@ public class Logic {
     static final int DIFFICULT = 2;
     static int level = 2;
     static int gameMode;
+    static int x1, y1, x2, y2;
 
     static char[][] map;
     static Random random = new Random();
@@ -131,6 +132,10 @@ public class Logic {
         for (int i = 0; i < dotToWIn; i++) {
             if (map[y + i * h2][x + i * h1] != c) return false;
         }
+        x1 = x;
+        y1 = y;
+        x2 = endLine_x;
+        y2 = endLine_y;
         return true;
     }
 
